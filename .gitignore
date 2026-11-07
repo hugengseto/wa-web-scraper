@@ -3,6 +3,7 @@
 *.tsv
 *.xls
 *.xlsx
+*.zip
 
 # Allow only public sample template
 !sample_contacts_dummy.csv
