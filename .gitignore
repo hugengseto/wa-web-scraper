@@ -1,0 +1,27 @@
+# Data files & PII protection (Prevent real personal data leak)
+*.csv
+*.tsv
+*.xls
+*.xlsx
+
+# Allow only public sample template
+!sample_contacts_dummy.csv
+
+# System & OS files
+.DS_Store
+Thumbs.db
+*.log
+desktop.ini
+
+# IDE & Editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node temporary files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tmp

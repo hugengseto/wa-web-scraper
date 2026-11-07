@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "WA Group Members & Number Scraper",
+  "version": "1.0.0",
+  "description": "Ekstrak nomor WhatsApp anggota grup dan cocokkan dengan data CSV langsung dari WhatsApp Web.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "WA Scraper Menu",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["injected/store-extractor.js"],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "css": ["content/content.css"],
+      "js": [
+        "utils/phone-parser.js",
+        "utils/exporter.js",
+        "utils/idb-extractor.js",
+        "utils/csv-matcher.js",
+        "content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "injected/store-extractor.js",
+        "icons/*"
+      ],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ]
+}

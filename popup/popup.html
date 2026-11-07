@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WA Group Scraper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <div class="logo-area">
+        <div class="wa-icon">🟢</div>
+        <div>
+          <h3>WA Scraper</h3>
+          <p class="subtitle">Group Members & Number Extractor</p>
+        </div>
+      </div>
+      <span class="badge">v1.0</span>
+    </div>
+
+    <div class="card status-card" id="status-card">
+      <div class="status-indicator" id="status-indicator"></div>
+      <div class="status-text">
+        <strong id="status-title">Memeriksa Tab...</strong>
+        <p id="status-desc">Mendeteksi halaman WhatsApp Web</p>
+      </div>
+    </div>
+
+    <div class="card instructions-card">
+      <h4>Cara Menggunakan:</h4>
+      <ol class="steps">
+        <li>Buka WhatsApp Web (<a href="https://web.whatsapp.com" target="_blank" id="wa-link">web.whatsapp.com</a>).</li>
+        <li>Buka salah satu <b>grup</b> yang Anda ikuti.</li>
+        <li>Klik tombol hijau <b>🟢 WA Scraper</b> di pojok kanan bawah WhatsApp Web.</li>
+        <li>Pilih <b>⚡ Scrape Semua Anggota</b> untuk mengambil data grup.</li>
+        <li>Buka tab <b>📊 Cocokkan CSV</b> untuk membandingkan dengan data pendaftar/pelanggan Anda dan menemukan nomor yang belum bergabung.</li>
+      </ol>
+    </div>
+
+    <div class="footer">
+      <button id="btn-open-wa" class="btn-primary">
+        Buka WhatsApp Web 🚀
+      </button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
